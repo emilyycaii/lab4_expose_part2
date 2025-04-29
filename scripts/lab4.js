@@ -28,7 +28,7 @@ function discountPrices(prices, discount) {
     const discounted = []
     const length = prices.length;
 
-    if (length < 1) return false;
+    if (!Array.isArray(prices) || length < 1) return false;
 
     for(let i = 0; i < length; i++) {
         let discountedPrice = prices[i] * (1 - discount);
